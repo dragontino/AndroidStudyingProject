@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AndroidTestProject</string>
+    <string name="app_name" translatable="false">AndroidTestProject</string>
+    <string name="go_back">Back</string>
+    <string name="go_further">Further</string>
+    <string name="first_fragment_title">First screen</string>
+    <string name="second_fragment_title">Second screen</string>
+    <string name="third_fragment_title">Third screen</string>
 </resources>
