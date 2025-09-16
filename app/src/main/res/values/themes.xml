@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.AndroidTestProject" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.AndroidTestProject" parent="Base.Theme.AndroidTestProject" />
+
+    <style name="SplitButtonStyle">
+        <item name="cornerRadius">0dp</item>
+    </style>
 </resources>
