@@ -57,7 +57,7 @@ class FillingByClickRectangle @JvmOverloads constructor(
             MotionEvent.ACTION_UP -> {
                 performClick()
                 filledAreaPaint.color = getNewColor(filledAreaPaint.color)
-                filledAreaRatio = (filledAreaRatio + .1f) % 1f + .1f
+                filledAreaRatio = (filledAreaRatio + .1f) % 1f
                 invalidate()
                 true
             }
