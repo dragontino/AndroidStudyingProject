@@ -38,6 +38,10 @@ android {
             jvmTarget = JvmTarget.JVM_17
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -47,6 +51,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.work)
 
     testImplementation(libs.junit)

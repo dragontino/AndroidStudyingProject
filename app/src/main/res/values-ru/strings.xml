@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="go_back">Назад</string>
+    <string name="go_further">Далее</string>
+    <string name="first_fragment_title">Первый экран</string>
+    <string name="second_fragment_title">Второй экран</string>
+    <string name="third_fragment_title">Третий экран</string>
+  
     <string name="default_notification_channel_name">Общие</string>
     <string name="device_is_charging">Устройство заряжается!</string>
 </resources>
