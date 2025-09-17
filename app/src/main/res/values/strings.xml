@@ -5,4 +5,8 @@
     <string name="first_fragment_title">First screen</string>
     <string name="second_fragment_title">Second screen</string>
     <string name="third_fragment_title">Third screen</string>
+
+    <string name="default_notification_channel_id" translatable="false">DefaultNotificationChannel</string>
+    <string name="default_notification_channel_name">General</string>
+    <string name="device_is_charging">Device is charging!</string>
 </resources>
