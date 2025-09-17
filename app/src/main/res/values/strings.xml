@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">AndroidTestProject</string>
+    <string name="app_name" translatable="false">AndroidTestProject</string>
+    <string name="default_notification_channel_id" translatable="false">DefaultNotificationChannel</string>
+    <string name="default_notification_channel_name">General</string>
+    <string name="device_is_charging">Device is charging!</string>
 </resources>
