@@ -53,6 +53,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.work)
+    debugImplementation(libs.squareup.leakcanary)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
