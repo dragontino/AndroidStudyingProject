@@ -46,6 +46,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+    implementation(project(":feature:home"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -54,6 +56,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.work)
+    implementation(libs.squareup.retrofit)
 
     // DI
     implementation(libs.google.dagger)
