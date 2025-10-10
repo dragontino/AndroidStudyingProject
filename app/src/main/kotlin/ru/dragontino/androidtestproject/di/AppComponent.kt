@@ -1,10 +1,8 @@
 package ru.dragontino.androidtestproject.di
 
-import androidx.lifecycle.ViewModelProvider
 import dagger.Component
 import ru.dragontino.androidtestproject.core.di.CoreModule
-import ru.dragontino.androidtestproject.core.retrofit.RetrofitService1
-import ru.dragontino.androidtestproject.core.retrofit.RetrofitService2
+import ru.dragontino.androidtestproject.feature.home.di.HomeDependencies
 import javax.inject.Singleton
 
 @Singleton
@@ -12,7 +10,5 @@ import javax.inject.Singleton
     modules = [CoreModule::class, ViewModelModule::class]
 )
 interface AppComponent {
-    val retrofitService1: RetrofitService1
-    val retrofitService2: RetrofitService2
-    val viewModelFactory: ViewModelProvider.Factory
+    val homeDependencies: HomeDependencies
 }
