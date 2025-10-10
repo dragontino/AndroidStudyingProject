@@ -1,5 +1,5 @@
 [versions]
-agp = "8.12.3"
+agp = "8.13.0"
 fragmentKtx = "1.8.9"
 kotlin = "2.2.20"
 ksp = "2.2.20-2.0.4"
@@ -11,10 +11,11 @@ appcompat = "1.7.1"
 material = "1.13.0"
 activity = "1.11.0"
 constraintlayout = "2.2.1"
-work = "2.10.4"
+work = "2.10.5"
 dagger = "2.57.2"
 retrofit = "3.0.0"
 viewmodel-ktx = "2.9.4"
+leak-canary = "2.14"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,6 +32,7 @@ androidx-work = { group = "androidx.work", name = "work-runtime-ktx", version.re
 google-dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
 google-dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
 squareup-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+squareup-leakcanary = { group = "com.squareup.leakcanary", name = "leakcanary-android", version.ref = "leak-canary" }
 
 
 [plugins]
@@ -38,4 +40,3 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-

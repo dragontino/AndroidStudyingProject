@@ -62,7 +62,7 @@ dependencies {
     implementation(libs.google.dagger)
     ksp(libs.google.dagger.compiler)
 
-
+    debugImplementation(libs.squareup.leakcanary)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
