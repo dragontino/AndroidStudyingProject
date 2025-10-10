@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidTestProject"
 include(":app")
- 
+include(":core")
+include(":feature:home")
