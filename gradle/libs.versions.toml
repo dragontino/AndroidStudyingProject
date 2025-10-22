@@ -16,6 +16,8 @@ dagger = "2.57.2"
 retrofit = "3.0.0"
 viewmodel-ktx = "2.9.4"
 leak-canary = "2.14"
+scabbard = "0.5.0"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,3 +42,5 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+scabbard = { id = "scabbard.gradle", version.ref = "scabbard" }
+
