@@ -29,7 +29,7 @@ class App : Application(), HomeComponentProvider {
     override fun onCreate() {
         super.onCreate()
 
-        appComponent = DaggerAppComponent.create()
+        appComponent = DaggerAppComponent.factory().create(this)
 
         WorkManager.getInstance(this)
             .enqueue(deviceIsChargingOneTimeWorkRequest)
