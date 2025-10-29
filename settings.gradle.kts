@@ -23,4 +23,5 @@ rootProject.name = "AndroidTestProject"
 include(":app")
 include(":core")
 include(":feature:home")
+include(":feature:car")
 include(":feature:flowers")
