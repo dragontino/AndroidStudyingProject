@@ -3,11 +3,13 @@ package ru.dragontino.androidtestproject.core.di
 import android.content.Context
 import dagger.Module
 import dagger.Provides
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import ru.dragontino.androidtestproject.core.retrofit.RetrofitResources1
 import ru.dragontino.androidtestproject.core.retrofit.RetrofitResources2
 import ru.dragontino.androidtestproject.core.retrofit.RetrofitService1
 import ru.dragontino.androidtestproject.core.retrofit.RetrofitService2
+import ru.dragontino.androidtestproject.core.retrofit.ServerResponseInterceptor
 import ru.dragontino.androidtestproject.core.room.FlowersDatabase
 import ru.dragontino.androidtestproject.core.room.dao.BouquetsDao
 import ru.dragontino.androidtestproject.core.room.dao.FlowersDao
@@ -32,18 +34,28 @@ class CoreModule {
     @Provides
     @Singleton
     @Named("server_1")
-    fun provideRetrofit1(): Retrofit {
+    fun provideRetrofit1(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(RetrofitResources1.BASE_URL)
+            .client(client)
             .build()
     }
 
     @Provides
     @Singleton
     @Named("server_2")
-    fun provideRetrofit2(): Retrofit {
+    fun provideRetrofit2(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(RetrofitResources2.BASE_URL)
+            .client(client)
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideHttpClient(): OkHttpClient {
+        return OkHttpClient.Builder()
+            .addNetworkInterceptor(ServerResponseInterceptor())
             .build()
     }
 
