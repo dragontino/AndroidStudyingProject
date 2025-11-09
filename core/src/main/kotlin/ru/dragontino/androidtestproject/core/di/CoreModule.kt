@@ -1,5 +1,6 @@
 package ru.dragontino.androidtestproject.core.di
 
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -9,6 +10,9 @@ import ru.dragontino.androidtestproject.core.retrofit.RetrofitResources2
 import ru.dragontino.androidtestproject.core.retrofit.RetrofitService1
 import ru.dragontino.androidtestproject.core.retrofit.RetrofitService2
 import ru.dragontino.androidtestproject.core.retrofit.ServerResponseInterceptor
+import ru.dragontino.androidtestproject.core.room.FlowersDatabase
+import ru.dragontino.androidtestproject.core.room.dao.BouquetsDao
+import ru.dragontino.androidtestproject.core.room.dao.FlowersDao
 import javax.inject.Named
 import javax.inject.Singleton
 
@@ -53,5 +57,24 @@ class CoreModule {
         return OkHttpClient.Builder()
             .addNetworkInterceptor(ServerResponseInterceptor())
             .build()
+    }
+
+
+    @Provides
+    @Singleton
+    fun provideFlowersDatabase(context: Context): FlowersDatabase {
+        return FlowersDatabase.getInstance(context)
+    }
+
+    @Provides
+    @Singleton
+    fun providesFlowersDao(database: FlowersDatabase): FlowersDao {
+        return database.flowersDao
+    }
+
+    @Provides
+    @Singleton
+    fun providesBouquetsDao(database: FlowersDatabase): BouquetsDao {
+        return database.bouquetsDao
     }
 }

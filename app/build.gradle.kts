@@ -45,6 +45,7 @@ android {
 dependencies {
     implementation(project(":core"))
     implementation(project(":feature:home"))
+    implementation(project(":feature:flowers"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
