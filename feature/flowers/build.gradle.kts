@@ -4,12 +4,13 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.ksp)
-    alias(libs.plugins.androidx.room)
 }
 
 android {
-    namespace = "ru.dragontino.androidtestproject.core"
-    compileSdk = 36
+    namespace = "ru.dragontino.androidtestproject.feature.flowers"
+    compileSdk {
+        version = release(36)
+    }
 
     defaultConfig {
         minSdk = 27
@@ -37,28 +38,18 @@ android {
             jvmTarget = JvmTarget.JVM_17
         }
     }
-
-    room {
-        schemaDirectory("$projectDir/schemas")
-    }
 }
 
 dependencies {
+    implementation(project(":core"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.lifecycle.process)
 
     // DI
     implementation(libs.google.dagger)
     ksp(libs.google.dagger.compiler)
-
-    implementation(libs.squareup.retrofit)
-
-    // Room
-    implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

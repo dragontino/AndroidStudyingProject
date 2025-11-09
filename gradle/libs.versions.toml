@@ -4,6 +4,7 @@ fragmentKtx = "1.8.9"
 kotlin = "2.2.20"
 ksp = "2.2.20-2.0.4"
 coreKtx = "1.17.0"
+lifecycle = "2.9.4"
 junit = "4.13.2"
 junitVersion = "1.3.0"
 espressoCore = "3.7.0"
@@ -17,6 +18,7 @@ retrofit = "3.0.0"
 viewmodel-ktx = "2.9.4"
 leak-canary = "2.14"
 scabbard = "0.5.0"
+room = "2.8.3"
 
 
 [libraries]
@@ -25,6 +27,7 @@ androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", ve
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-process", version.ref = "lifecycle" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewmodel-ktx" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
@@ -35,6 +38,8 @@ google-dagger = { group = "com.google.dagger", name = "dagger", version.ref = "d
 google-dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
 squareup-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 squareup-leakcanary = { group = "com.squareup.leakcanary", name = "leakcanary-android", version.ref = "leak-canary" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 
 
 [plugins]
@@ -43,4 +48,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 scabbard = { id = "scabbard.gradle", version.ref = "scabbard" }
+androidx-room = { id = "androidx.room", version.ref = "room" }
 

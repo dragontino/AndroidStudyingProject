@@ -1,5 +1,6 @@
 package ru.dragontino.androidtestproject.core.di
 
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -7,6 +8,9 @@ import ru.dragontino.androidtestproject.core.retrofit.RetrofitResources1
 import ru.dragontino.androidtestproject.core.retrofit.RetrofitResources2
 import ru.dragontino.androidtestproject.core.retrofit.RetrofitService1
 import ru.dragontino.androidtestproject.core.retrofit.RetrofitService2
+import ru.dragontino.androidtestproject.core.room.FlowersDatabase
+import ru.dragontino.androidtestproject.core.room.dao.BouquetsDao
+import ru.dragontino.androidtestproject.core.room.dao.FlowersDao
 import javax.inject.Named
 import javax.inject.Singleton
 
@@ -41,5 +45,24 @@ class CoreModule {
         return Retrofit.Builder()
             .baseUrl(RetrofitResources2.BASE_URL)
             .build()
+    }
+
+
+    @Provides
+    @Singleton
+    fun provideFlowersDatabase(context: Context): FlowersDatabase {
+        return FlowersDatabase.getInstance(context)
+    }
+
+    @Provides
+    @Singleton
+    fun providesFlowersDao(database: FlowersDatabase): FlowersDao {
+        return database.flowersDao
+    }
+
+    @Provides
+    @Singleton
+    fun providesBouquetsDao(database: FlowersDatabase): BouquetsDao {
+        return database.bouquetsDao
     }
 }
